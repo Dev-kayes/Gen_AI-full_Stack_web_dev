@@ -91,7 +91,6 @@ async function getMeController(req, res) {
       name: user.userName,
       email: user.email,
     },
-    // how ever
   });
 }
 

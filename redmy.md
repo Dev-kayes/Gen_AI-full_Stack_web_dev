@@ -1,0 +1,1 @@
+to use scss first we need to import style.scss in the main file instead of index.css file that is provided by react vite. to use scss we need to do npm i sass . that allows the browser to use scss style on the web page
