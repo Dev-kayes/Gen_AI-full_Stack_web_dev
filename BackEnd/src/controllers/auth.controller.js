@@ -55,6 +55,10 @@ async function loginAuthController(req, res) {
       message: "Invalid email or password",
     });
   }
+  const isMatch = await bcrypt.compare(password, user.password);
+  if (!isMatch) {
+    return res.status(400).json({ msg: "Invalid Email or Password" });
+  }
   const token = jwt.sign(
     { id: user._id, userName: user.userName },
     process.env.JWT_SECRET,
